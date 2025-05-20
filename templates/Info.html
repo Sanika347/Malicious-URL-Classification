@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>About Page</title>
+</head>
+<body>
+<header class="text-orange-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-orange-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Artificial Intelligence and Machine Learning</span>
+    </a>
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+      <a href={{url_for('Home')}} class="mr-5 hover:text-grey-900">Home</a>
+      <a href={{url_for('info')}} class="mr-5 hover:text-gray-900">Information</a>
+      <a href={{url_for('about')}} class="mr-5 hover:text-gray-900">About</a>
+      <a href={{url_for('contact')}} class="hover:text-gray-900">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+<div class="section one" id="section1">
+
+  <section class="text-gray-600 body-font">
+
+    <div class="container px-5 py-10 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-xs text-orange-500 tracking-widest font-medium title-font mb-1">Tokenization and Vectorization</h2>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Vectorizers</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">In order to use textual data for predictive modeling, the text must be parsed to remove
+          certain words – this process is called tokenization. These words need to then be encoded as integers, or floating-point values, for use as
+          inputs in machine learning algorithms. This process is called feature extraction (or vectorization). </p>
+      </div>
+
+      <div class="flex flex-wrap">
+        <div class="xl:w-1/2 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Count Vectorizer</h2>
+          <p class="leading-relaxed text-base mb-8">CountVectorizer is a great tool provided by the scikit-learn library in Python. It is used to transform
+            a given text into a vector on the basis of the frequency (count) of each word that occurs in the entire text. CountVectorizer creates
+            a sparse matrix in which each unique word is represented by a column of the matrix, and each text sample from the document is a row in the matrix.
+          </p>
+        </div>
+
+        <div class="xl:w-1/2 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">TF-IDF Vectorizer</h2>
+          <p class="leading-relaxed text-base mb-4">TF is the number of times a term appears in a particular document. IDF is a measure of how common
+            or rare a term is across the entire corpus of documents. If the word is common and appears in many documents, the idf value (normalized) will
+            approach 0 or else approach 1 if it’s rare. TF-IDF value of a term in a document is the product of its TF and IDF. The higher is the value,
+            the more relevant the term is in that document.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-10 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-xs text-orange-500 tracking-widest font-medium title-font mb-1">AI and ML</h2>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Machine Learning Models</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">A machine learning model is a file that has been trained to recognize certain types of patterns. You
+          train a model over a set of data, providing it an algorithm that it can use to reason over and learn from those data. Once you have trained the model, you
+          can use it to reason over data that it hasn't seen before, and make predictions about those data.</p>
+      </div>
+     <div class="flex flex-wrap">
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Multinomial Naive Bayes</h2>
+          <p class="leading-relaxed text-base mb-4">The multinomial Naive Bayes classifier is suitable for classification with discrete features (e.g., word counts for
+            text classification). The multinomial distribution normally requires integer feature counts.
+          </p>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Logistic Regression</h2>
+          <p class="leading-relaxed text-base mb-4">Logistic regression is a statistical model that uses a logistic function to model a binary dependent
+            variable. In regression analysis, logistic (logit) regression is estimating the parameters of a of binary regression.
+          </p>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Random Forest Classifier</h2>
+          <p class="leading-relaxed text-base mb-4">Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks
+            that operates by constructing a multitude of decision trees at training time.
+          </p>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Support Vector Machine </h2>
+          <p class="leading-relaxed text-base mb-4">The objective of the support vector machine algorithm is to find a hyperplane (Support Vectors) in an N-dimensional space
+            (N - number of features) that distinctly classifies the data points.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

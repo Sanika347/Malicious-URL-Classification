@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>About Page</title>
+</head>
+<body>
+<header class="text-orange-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-orange-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Artificial Intelligence and Machine Learning</span>
+    </a>
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+      <a href={{url_for('Home')}} class="mr-5 hover:text-grey-900">Home</a>
+      <a href={{url_for('Home')}}#section1 class="mr-5 hover:text-gray-900">Information</a>
+      <a href={{url_for('about')}} class="mr-5 hover:text-gray-900">About</a>
+      <a href={{url_for('contact')}} class="hover:text-gray-900">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-5 mx-auto text-center">
+    <h2 class="text-xs text-orange-500 tracking-widest font-medium title-font mb-1">Tokenization and Vectorization</h2>
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Select a Vectorizer</h1>
+  </div>
+
+  <div class="container px-5 py-5 mx-auto">
+    <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+      <div class="sm:w-1/2 mb-10 px-4">
+        <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">Count Vectorizer</h2>
+        <p class="leading-relaxed text-base">CountVectorizer is a great tool provided by the scikit-learn library in Python. It is used to transform
+            a given text into a vector on the basis of the frequency (count) of each word that occurs in the entire text. CountVectorizer creates
+            a sparse matrix in which each unique word is represented by a column of the matrix, and each text sample from the document is a row in the matrix.
+          </p>
+        <a href={{url_for('choose_model')}} class="mr-5 hover:text-gray-900">
+          <button class="flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded">SELECT</button>
+        </a>
+      </div>
+      <div class="sm:w-1/2 mb-10 px-4">
+        <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">TF-IDF Vectorizer</h2>
+        <p class="leading-relaxed text-base">TF is the number of times a term appears in a particular document. IDF is a measure of how common
+            or rare a term is across the entire corpus of documents. If the word is common and appears in many documents, the idf value will
+            approach 0 or else approach 1 if it’s rare. TF-IDF value of a term in a document is the product of its TF and IDF. The higher the value,
+            more important the term is.</p>
+        <a href={{url_for('choose_model')}} class="mr-5 hover:text-gray-900">
+          <button class="flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded" >SELECT</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
